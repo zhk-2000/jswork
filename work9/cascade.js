@@ -4,24 +4,7 @@ var zhk2Arr = [
     ['数控', '模具', '机设', '机自'],
     ['机电', '电气', '建电', '建智', '空调', '光电', '机器人'],
     ['汽检', '汽配', '汽电', '汽营', '汽新'],
-teOption(collegeSelect,collegeSelectArr);
-
-var majorSelect = document.getElementById('majorSelect');
-collegeSelect.onchange = function() {
-    majorSelect.options.length = 0;
-    createOption(majorSelect, majorSelectArr[collegeSelect.value]);
-    if (collegeSelect.value >= 0) {
-        majorSelect.onchange();
-    } else {
-        classSelect.options.length = 0;
-    }
-};
-
-var classSelect = document.getElementById('classSelect');
-majorSelect.onchange = function() {
-    classSelect.options.length = 0;
-    createOption(classSelect, classSelectArr[collegeSelect.value][majorSelect.value]);
-};    ['网络', '电商', '软件', '工设', '广告', '室内'],
+    ['网络', '电商', '软件', '工设', '广告', '室内'],
     ['商英', '应英', '日语', '旅管', 'TAFE旅管', '国际'],
     ['会计', '财管', '金融', '国贸'],
     ['物流', '物技', '工企', '营销', '报关', '连锁'],
@@ -96,5 +79,22 @@ function createOption(obj,data) {
         obj.options.add(op);
     }
 }
-var collegeSelect = document.getElementById('collegeSelect');
-crea
+var zhk1 = document.getElementById('zhk1');
+createOption(zhk1,zhk1Arr);
+
+var zhk2 = document.getElementById('zhk2');
+zhk1.onchange = function() {
+    zhk2.options.length = 0;
+    createOption(zhk2, zhk2Arr[zhk1.value]);
+    if (zhk1.value >= 0) {
+        zhk2.onchange();
+    } else {
+        zhk3.options.length = 0;
+    }
+};
+
+var zhk3 = document.getElementById('zhk3');
+zhk2.onchange = function() {
+    zhk3.options.length = 0;
+    createOption(zhk3, zhk3Arr[zhk1.value][zhk2.value]);
+};
