@@ -1,0 +1,21 @@
+ShopCart('cart', [{
+    name:'如来神掌（上册）',
+    price:1111,
+    num:1
+},
+{
+    name:'如来神掌（下册）',
+    price:2222,
+    num:1
+},
+{
+    name:'九阴白骨爪（上册）',
+    price:3333,
+    num:1
+},
+{
+    name:'九阴白骨爪（下册）',
+    price:4444,
+    num:1
+}
+]);
