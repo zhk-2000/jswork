@@ -1,17 +1,20 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>詹华康的Ajax无刷新提交评论</title>
+    <script src="../jquery.js"></script>
 </head>
 
 <body>
-    <div>詹华康的ajax无刷新提交评论</div>
-    学号：<input type="text" value="07190546" id="sno"><br>
-    姓名：<input type="text" value="詹华康" id="name"><br>
-    评论：<input type="text" value="我会写AJAX，太牛逼了。" id="content" size=30><br>
-    <input type="button" value="发表评论" onclick="send()"><br>
+    <div>詹华康的jQuery ajax无刷新提交评论</div>
+    <form>
+        学号：<input type="text" value="07190546" name="sno"><br>
+        姓名：<input type="text" value="詹华康" name="name"><br>
+        评论：<input type="text" value="我会写jQuery Ajax，我太厉害了" name="content" size=30><br>
+        <input type="button" value="发表评论"><br>
+    </form>
     <div id="result"></div>
 </body>
-<script src="index.js"></script>
-
+<script src="index1.js"></script>
 </html>
